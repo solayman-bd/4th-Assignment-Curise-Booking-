@@ -58,20 +58,20 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="first-class-input" class="inp-style inp-width" type="number" value="0" name="">
                 </div>
                 <div class="plus-minus-btn">
-                    <p>+ -</p>
+                    <p><span id="first-class-plus-button">+</span> <span id="first-class-minus-button">-</span> </p>
                 </div>
             </div>
             
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="economy-class-input" class="inp-style inp-width" type="number" value="0" name="">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span>+</span> <span>-</span> </p>
+                    <p> <span id="economy-class-plus-button">+</span> <span id="economy-class-minus-button">-</span> </p>
                 </div>
             </div>
             <div class="calculations">
@@ -80,7 +80,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p id="subtotal-value">$0</p>
                     </div>
                 </div>
 
@@ -89,7 +89,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p id="tax-value">0</p>
                     </div>
                 </div>
                 <hr>
@@ -98,7 +98,7 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p id="total-value">$0</p>
                     </div>
                 </div>
             </div>
@@ -106,7 +106,23 @@
         </div>
     </main>
 
+    <script>
+        let firstClassInput = parseInt(document.getElementById("first-class-input").value);
+        let firstClassPlusButton = document.getElementById("first-class-plus-button");
+        let firstClassMinusButton =  document.getElementById("first-class-minus-button");
+
+        let economyClassInput = parseInt(document.getElementById("economy-class-input").value);
+        let economyClassPlusButton = document.getElementById("economy-class-plus-button");
+        let economyClassMinusButton =  document.getElementById("economy-class-minus-button");
+
+        let subtotalValue = parseInt(document.getElementById("subtotal-value").innerText);
+        let taxValue = parseFloat(document.getElementById("tax-value").innerText);
+        let totalValue = parseFloat(document.getElementById("total-value").innerText);
+
+    </script>
+
     <!--Thank You-->
+    
 </body>
 
 </html>
