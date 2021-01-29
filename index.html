@@ -1,188 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Curise Booking</title>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet"
+        />
+        <!-- bootstrap -->
+        <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        />
+        <!-- font-awesome -->
+        <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        rel="stylesheet"
+        />
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curise Booking</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
-    <!-- font-awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet"/>
-     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <body>
+        <section id="appearance-before-book-now">
+                <!--Header and Menu Section-->
+            <header class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a class="active" href="#">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-<body>
-    <!--Header and Menu Section-->
-    <header class="container">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a class="active" href="#">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
+            <!--Booking Section-->
+            <main class="main-content container">
 
-    <!--Booking Section-->
-    <main class="main-content container">
-
-        <div class="booking-content">
-            <h1>Cruise Queen</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book./p>
-        </div>
-
-
-        <div class="booking-form">
-            <h3>Book Ocean Time</h3>
-            <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
-            </div>
-            <div class="input-group">
-                <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
-            </div>
-            <div class="inputs">
-                <div class="input-group">
-                    <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                <div class="booking-content">
+                    <h1>Cruise Queen</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book./p>
                 </div>
-                <div class="input-group">
-                    <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+
+                <div class="booking-form">
+                    <h3>Book Ocean Time</h3>
+                    <div class="input-group">
+                        <label for="">Flying From</label>
+                        <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Flying To</label>
+                        <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                    </div>
+                    <div class="inputs">
+                        <div class="input-group">
+                            <label" for="">Departure</label>
+                            <input class="inp-style" type="date" name="">
+                        </div>
+                        <div class="input-group">
+                            <label for="">Return</label>
+                            <input class="inp-style" type="date" name="">
+                        </div>
+                    </div>
+                    <div class="input-group f-class">
+                        <div>
+                            <label for="">First Class ($150)</label>
+                            <input id="first-class-input" class="inp-style inp-width" type="number" value="0" name="">
+                        </div>
+                        
+                        <div style="margin-top: 30px;">                
+                            <button id="first-class-plus-button" class="btn btn-default">
+                            <i class="fas fa-plus"></i>
+                            </button>
+                            <button id="first-class-minus-button" class="btn btn-default">
+                            <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group f-class">
+                        <div>
+                            <label for="">Economy ($100)</label>
+                            <input id="economy-class-input" class="inp-style inp-width" type="number" value="0" name="">
+                        </div>
+                        <div style="margin-top: 30px;">                
+                            <button id="economy-class-plus-button" class="btn btn-default">
+                            <i class="fas fa-plus"></i>
+                            </button>
+                            <button id="economy-class-minus-button" class="btn btn-default">
+                            <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="calculations">
+                        <div class="amount">
+                            <div class="left">
+                                <p>Subtotal</p>
+                            </div>
+                            <div class="right">
+                                <p>$<span id="subtotal-value">0</span></p>
+                            </div>
+                        </div>
+
+                        <div class="amount">
+                            <div class="left">
+                                <p>Charge 10% VAT</p>
+                            </div>
+                            <div class="right">
+                                <p>$<span id="tax-value">0</span></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="amount">
+                            <div class="left">
+                                <h4>Total</h4>
+                            </div>
+                            <div class="right">
+                                <p>$<span id="total-value">0</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="book-now-button" class="btn-style">Book Now</button>
                 </div>
-            </div>
-            <div class="input-group f-class">
-                <div>
-                    <label for="">First Class ($150)</label>
-                    <input id="first-class-input" class="inp-style inp-width" type="number" value="0" name="">
-                </div>
+            </main>
+        </section>
+
+        <section id="appearance-after-book-now" class="container">
+            <div class="jumbotron">
+               
+                <h1 class="display-6">Congratulations, You have successfully purchased your ticket!</h1>
+                <h2 class="display-8">CASH MEMO</h2>
+                <table class="table">
+                    <thead>
+                        <tr class="table-primary">
+                            <th scope="col">Serial No.</th>
+                            <th scope="col">Ticket Type</th>
+                            <th scope="col">Number Of Tickets</th>
+                            <th scope="col">Rate</th>
+                            <th scope="col">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">1</th>
+                        <td>First Class Ticket</td>
+                        <td id="number-of-first-class-ticket">0</td>
+                        <td>$150</td>
+                        <td>$<span id="amount-for-first-class">0</span></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">2</th>
+                        <td>Economy Class Ticket</td>
+                        <td id="number-of-economy-class-ticket">0</td>
+                        <td>$100</td>
+                        <td>$<span id="amount-for-economy-class">0</span></td>
+                        </tr>
+                        <tr>
+                        <th scope="row"> </th>
+                        <td> </td>
+                        <td> </td>
+                        <td>Sub Total:</td>
+                        <td>$<span id="amount-for-subtotal">0</span></td>
+                        </tr>
+                        <tr>
+                        <th scope="row"> </th>
+                        <td> </td>
+                        <td> </td>
+                        <td>10% VAT :</td>
+                        <td>$<span id="amount-for-vat">0</span></td>
+                        </tr>
+                         <tr>
+                        <th scope="row"> </th>
+                        <td> </td>
+                        <td> </td>
+                        <td><p>Total &nbsp; &nbsp; &nbsp; &nbsp;:</p></td>
+                        <td>$<span id="amount-for-total">0</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 
-                <div style="margin-top: 30px;">                
-                    <button id="first-class-plus-button" class="btn btn-default">
-                      <i class="fas fa-plus"></i>
-                    </button>
-                    <button id="first-class-minus-button" class="btn btn-default">
-                      <i class="fas fa-minus"></i>
-                    </button>
-                </div>
             </div>
-            
-            <div class="input-group f-class">
-                <div>
-                    <label for="">Economy ($100)</label>
-                    <input id="economy-class-input" class="inp-style inp-width" type="number" value="0" name="">
-                </div>
-                <div style="margin-top: 30px;">                
-                    <button id="economy-class-plus-button" class="btn btn-default">
-                      <i class="fas fa-plus"></i>
-                    </button>
-                    <button id="economy-class-minus-button" class="btn btn-default">
-                      <i class="fas fa-minus"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="calculations">
-                <div class="amount">
-                    <div class="left">
-                        <p>Subtotal</p>
-                    </div>
-                    <div class="right">
-                        <p>$<span id="subtotal-value">0</span></p>
-                    </div>
-                </div>
-
-                <div class="amount">
-                    <div class="left">
-                        <p>Charge 10% VAT</p>
-                    </div>
-                    <div class="right">
-                        <p>$<span id="tax-value">0</span></p>
-                    </div>
-                </div>
-                <hr>
-                <div class="amount">
-                    <div class="left">
-                        <h4>Total</h4>
-                    </div>
-                    <div class="right">
-                        <p>$<span id="total-value">0</span></p>
-                    </div>
-                </div>
-            </div>
-            <button class="btn-style">Book Now</button>
-        </div>
-    </main>
-
-    <script>
+        </section>
         
-        let firstClassPlusButton = document.getElementById("first-class-plus-button");
-        let firstClassMinusButton =  document.getElementById("first-class-minus-button");
-        let firstClassUnitPrice = 150;
-       
-        let economyClassPlusButton = document.getElementById("economy-class-plus-button");
-        let economyClassMinusButton =  document.getElementById("economy-class-minus-button");
-        let economyClassUnitPrice = 100;
+        
+        <script>
 
-        let subtotalValue = parseInt(document.getElementById("subtotal-value").innerText);
-        let taxValue = parseFloat(document.getElementById("tax-value").innerText);
-        let totalValue = parseFloat(document.getElementById("total-value").innerText);
+            let firstClassPlusButton = document.getElementById(
+                "first-class-plus-button"
+            );
+            let firstClassMinusButton = document.getElementById(
+                "first-class-minus-button"
+            );
+            let firstClassUnitPrice = 150;
 
-        function increaseButtonHandler(unitPrice,qualityReceiver){
-            let count = parseInt(document.getElementById(qualityReceiver+"-class-input").value);
-            count++;
-            document.getElementById(qualityReceiver+"-class-input").value = count;        
-            subtotalValue = subtotalValue+unitPrice;
-            document.getElementById("subtotal-value").innerText= subtotalValue;
-            let calculatedTaxValue = taxValue + .1*subtotalValue;   
-            document.getElementById("tax-value").innerText=calculatedTaxValue; 
-            totalValue= subtotalValue+calculatedTaxValue;
-            document.getElementById("total-value").innerText=totalValue;     
-        }
+            let economyClassPlusButton = document.getElementById(
+                "economy-class-plus-button"
+            );
+            let economyClassMinusButton = document.getElementById(
+                "economy-class-minus-button"
+            );
+            let economyClassUnitPrice = 100;
 
-        function decreaseButtonHandler(unitPrice,qualityReceiver){
-            let count = parseInt(document.getElementById(qualityReceiver+"-class-input").value);
-            let againTaxValue = parseFloat(document.getElementById("tax-value").innerText);
-            let taxCalculator=0;
-            let totalValueAgain= parseFloat(document.getElementById("total-value").innerText);
-            if(count>0){
-             count--;
-             subtotalValue = subtotalValue-unitPrice;
-             taxCalculator = againTaxValue - .1*unitPrice;
-             document.getElementById("tax-value").innerText=taxCalculator;
-             totalValueAgain= totalValueAgain-unitPrice-unitPrice*.1;
-             document.getElementById("total-value").innerText= totalValueAgain;
-            } 
-            document.getElementById(qualityReceiver+"-class-input").value=count; 
-            document.getElementById("subtotal-value").innerText= subtotalValue;            
-        }
+            let subtotalValue = parseInt(
+                document.getElementById("subtotal-value").innerText
+            );
+            let taxValue = parseFloat(document.getElementById("tax-value").innerText);
+            let totalValue = parseFloat(
+                document.getElementById("total-value").innerText
+            );
 
-        firstClassPlusButton.addEventListener("click",function(){
-            increaseButtonHandler(firstClassUnitPrice,"first");
-        })
+            function increaseButtonHandler(unitPrice, qualityReceiver) {
+                let count = parseInt(
+                document.getElementById(qualityReceiver + "-class-input").value
+                );
+                count++;
+                document.getElementById(qualityReceiver + "-class-input").value = count;
+                document.getElementById("number-of-"+qualityReceiver+"-class-ticket").innerText = count;
+                subtotalValue = subtotalValue + unitPrice;
+                let calculatedTaxValue = taxValue + 0.1 * subtotalValue;
+                document.getElementById("subtotal-value").innerText = subtotalValue;
+                document.getElementById("tax-value").innerText = calculatedTaxValue;
+                totalValue = subtotalValue + calculatedTaxValue;
+                document.getElementById("total-value").innerText = totalValue;
+                // Cash Memo Portion start
+                let memoAmountForTicket = parseInt(document.getElementById("amount-for-"+qualityReceiver+"-class").innerText);
+                memoAmountForTicket=memoAmountForTicket+unitPrice;
+                document.getElementById("amount-for-"+qualityReceiver+"-class").innerText= memoAmountForTicket;
+                document.getElementById("amount-for-subtotal").innerText = subtotalValue;
+                document.getElementById("amount-for-vat").innerText=calculatedTaxValue;
+                document.getElementById("amount-for-total").innerText=totalValue;
+                // cash Memo Portion End       
+            }
 
-        firstClassMinusButton.addEventListener("click",function(){
-           decreaseButtonHandler(firstClassUnitPrice,"first");
-        })
+            function decreaseButtonHandler(unitPrice, qualityReceiver) {
+                // cash Memo Start
+                let memoAmountForTicket = parseInt(document.getElementById("amount-for-"+qualityReceiver+"-class").innerText);
+                // cash Memo End
+                let count = parseInt(
+                document.getElementById(qualityReceiver + "-class-input").value
+                );
+                let againTaxValue = parseFloat(
+                document.getElementById("tax-value").innerText
+                );
+                let taxCalculator = 0;
+                let totalValueAgain = parseFloat(
+                document.getElementById("total-value").innerText
+                );
+                if (count > 0) {
+                count--;
+                subtotalValue = subtotalValue - unitPrice;
+                taxCalculator = againTaxValue - 0.1 * unitPrice;
+                document.getElementById("tax-value").innerText = taxCalculator;
+                totalValueAgain = totalValueAgain - unitPrice - unitPrice * 0.1;
+                document.getElementById("total-value").innerText = totalValueAgain;
+                //Cash Memo Start
+                memoAmountForTicket=memoAmountForTicket-unitPrice;
+                document.getElementById("amount-for-vat").innerText=taxCalculator;
+                document.getElementById("amount-for-total").innerText=totalValueAgain;
+                // cash Memo End
+                }
+                document.getElementById(qualityReceiver + "-class-input").value = count;
+                document.getElementById("number-of-"+qualityReceiver+"-class-ticket").innerText = count;
+                document.getElementById("subtotal-value").innerText = subtotalValue;
+                // this value is sent to cashMemo
+                document.getElementById("amount-for-subtotal").innerText = subtotalValue;
+                document.getElementById("amount-for-"+qualityReceiver+"-class").innerText= memoAmountForTicket;
+                // cash Memo End
+            }
 
-        economyClassPlusButton.addEventListener("click",function(){
-            increaseButtonHandler(economyClassUnitPrice,"economy");
-        })
+            firstClassPlusButton.addEventListener("click", function () {
+                increaseButtonHandler(firstClassUnitPrice, "first");
+            });
 
-        economyClassMinusButton.addEventListener("click",function(){
-           decreaseButtonHandler(economyClassUnitPrice,"economy");
-        })
+            firstClassMinusButton.addEventListener("click", function () {
+                decreaseButtonHandler(firstClassUnitPrice, "first");
+            });
 
-    </script>
+            economyClassPlusButton.addEventListener("click", function () {
+                increaseButtonHandler(economyClassUnitPrice, "economy");
+            });
 
-    <!--Thank You-->
-    
-</body>
+            economyClassMinusButton.addEventListener("click", function () {
+                decreaseButtonHandler(economyClassUnitPrice, "economy");
+            });
+
+            let bookNowButton = document.getElementById("book-now-button")
+
+            bookNowButton.addEventListener("click",function(){
+                document.getElementById("appearance-before-book-now").style.display="none";
+                document.getElementById("appearance-after-book-now").style.display="block";
+            })
+
+        </script>
+
+    </body>
 
 </html>
